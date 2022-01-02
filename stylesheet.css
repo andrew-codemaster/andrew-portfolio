@@ -1,0 +1,154 @@
+/* 1. UNIVERSAL STYLES */
+
+/* Import Fonts (Poppins - Extra-light 200, Regular 400, Bold 700) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+
+/* 2. HEADER STYLES */
+
+header{ 
+    height: 30%;
+    width: 100vw;
+}
+
+.head-container-desktop {
+    
+    display: none;
+}
+
+.head-container {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas:
+    "logo hero-image hamburger";
+    background-color: #191917;
+    width: 100vw;
+    height: auto;
+}
+
+#hero-image {
+    width: 100%;
+    height: auto;
+    padding-left: 5%;
+    align-items: end;
+    grid-area: hero-image;
+}
+
+#logo {
+    width: 250%;
+    height: auto;
+    padding-left: 5%;
+    grid-area: logo;
+}
+
+#hamburger {
+    float: right;
+    width: 100%;
+    height: auto;
+    margin: 30% 40%;
+    grid-area: hamburger;  
+    display: none;
+}
+
+/* 3. ABOUT ME STYLES */
+
+.about-me {
+    background-color: #1C1B19;
+}
+
+ .about-me h2 {
+     padding: 5% 0;
+     color: #FFB30F;
+     text-align: center;
+     font-size: 2em;
+     font-weight: bold;
+ }
+
+ .about-me p {
+     color: white;
+     text-align: center;
+     font-size: 1.5em;
+     line-height: 1.5em;
+     padding: 0 10% 10% 10%;
+ }
+
+
+/* 4. PORTFOLIO STYLES */
+
+.my-work {
+    display: grid;
+    border: solid 1px red;
+    justify-content: center;
+    gap: 1%;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1080px) {
+    header{ 
+        height: 66vh;
+        width: 100vw;
+    }
+
+    .head-container {
+        display: none;
+    }
+
+    .head-container-desktop {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 60% 10% 30%;
+        grid-template-areas:
+        "hero-text hero-image";
+        background-color: #191917;
+        width: 100vw;
+        height: 66vh;
+    }
+
+    .head-container-desktop h2 {
+        color: white;
+        font-size: 5em;
+        padding-left: 10%;
+        padding-top: 10%;
+        font-family: "Poppins";
+        grid-area: hero-text;
+    }
+
+    #web-developer {
+        color: #FFB30F;
+        font-weight: bold;
+        margin-bottom: 40%;
+    }
+
+    #hero-image-desktop {
+        width: auto;
+        height: 66vh;
+        grid-area: hero-image;
+
+        -webkit-filter: drop-shadow(10px 10px 10px #222);
+        filter: drop-shadow(10px 10px 10px #222);
+    }
+
+    .my-work {
+        height: 100vh;
+        width: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1%;
+    }
+
+    .my-work img {
+        height: auto;
+        width: 40vw;
+        align-self: center;
+        align-items: center;
+    }
+
+}
